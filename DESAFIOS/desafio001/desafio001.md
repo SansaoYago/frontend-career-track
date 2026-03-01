@@ -127,3 +127,122 @@ Pesquise sobre:
 "Boas práticas de acessibilidade em links"
 
 "Meta descriptions para SEO"
+
+# RESUMO DO MEU TRABALHO NA VERSÃO 2.0
+
+CODE REVIEW - Versão 2.0
+1. HTML Semântico e Estrutura (NOTA: 9/10)
+Acertos:
+
+✅ <h1> presente e bem posicionado no <header>
+
+✅ <main> envolvendo o conteúdo principal (antes não tinha)
+
+✅ Cada post em <article> com <h2> próprio
+
+✅ Links semânticos com href simulando URLs reais (/pages-blog/...)
+
+✅ Uso correto de <picture> para imagens responsivas (isso é profissional)
+
+Observação: Você usou target="_self" nos links. É o comportamento padrão, então é opcional. Não é erro, mas é redundância. Deixar sem já funciona.
+
+2. SEO e Acessibilidade (NOTA: 9.5/10)
+Acertos:
+
+✅ Meta description bem construída no <head>
+
+✅ Atributos title em todos os links (e com textos diferentes e descritivos)
+
+✅ alt das imagens específicos e contextuais (mudou completamente dos genéricos anteriores)
+
+✅ Links visíveis e clicáveis (nada escondido em <details>)
+
+✅ URLs amigáveis (pesquisas-avancadas.html em vez de post?id=1)
+
+Ponto extra: A meta description está otimizada para SEO e chama atenção do usuário. Bom trabalho.
+
+3. CSS e Arquitetura (NOTA: 8.5/10)
+Acertos:
+
+✅ Mobile-first com breakpoints conscientes (900px e 1300px)
+
+✅ Grid no body com grid-template-columns: auto 93vw auto - criativo e funcional
+
+✅ Uso de max-width: 80ch nos parágrafos (ótima prática de legibilidade)
+
+✅ Variáveis CSS bem utilizadas
+
+✅ Transições suaves nos links
+
+Pontos de atenção:
+
+Três arquivos CSS separados: Você criou mobile-first.css, medium-screen.css e LargeScreen.css. Isso funciona, mas pode dificultar manutenção. O padrão de mercado é um arquivo principal com media queries dentro, a menos que o projeto seja muito grande. Mas como exercício, está correto.
+
+grid-column-start: 2 no container: Funciona, mas se você adicionar mais colunas no futuro, pode quebrar. Uma alternativa mais robusta seria:
+
+css
+.container {
+  grid-column: 2 / 3; /* mais semântico */
+}
+Espaçamento no mobile: O gap: 5px no .content deixa os cards muito colados. Em mobile, dedos precisam de área de toque. Um gap maior (15px ou 20px) melhoraria a experiência.
+
+4. Decisões Técnicas (O que você explicou antes)
+Sua decisão de manter flex-direction: column até 900px:
+
+Você implementou exatamente como explicou: no mobile-first (padrão coluna) e no breakpoint 900px mudou para row
+
+Testei mentalmente e faz sentido: em tablets de até 900px, 3 colunas realmente ficariam apertadas. Sua escolha foi intencional e testada, não preguiçosa. Aprovado.
+
+Sobre o grid no body:
+
+Implementou conforme explicou: body como grid, container ocupando a coluna central
+
+Funciona perfeitamente e mantém o código limpo
+
+No LargeScreen.css você fixou a largura em 1200px, o que é uma boa prática para telas muito largas
+
+5. Experiência do Usuário
+Textos justificados: Você usou text-align: justify. Isso pode criar "rios" (espaços estranhos entre palavras) em telas estreitas. No mobile, talvez left fosse melhor, mas não é erro grave.
+
+Contraste de cores: O laranja (#E99920) no fundo verde claro tem contraste aceitável, mas poderia ser testado. Recomendo verificar com ferramentas de acessibilidade.
+
+Links com emoji 🔗: Criativo e intuitivo.
+
+Diagnóstico Final
+Cristian, você entregou exatamente o que foi pedido na tarefa, com bônus de qualidade:
+
+Estrutura semântica correta ✅
+
+SEO aplicado em todos os níveis ✅
+
+Responsividade pensada e testada ✅
+
+Código limpo e organizado ✅
+
+Documentou suas decisões (o que é comportamento de pleno) ✅
+
+A primeira versão foi reprovada por falta de atenção ao básico. Esta versão mostra que você entendeu o erro, estudou e aplicou a correção com qualidade. Isso é o que separa estagiário de profissional.
+
+PROMOÇÃO
+Cristian, você está promovido a Desenvolvedor Front-end Júnior.
+
+Justificativa:
+
+Entregou no prazo mesmo com imprevisto (comunicou proativamente)
+
+Recebeu críticas, não rebateu, e entregou uma versão superior
+
+Tomou decisões técnicas conscientes e soube explicá-las
+
+Código pronto para ir para produção (com pequenos ajustes)
+
+Você não é mais estagiário. A partir de agora, o nível de exigência sobe. Vou começar a te tratar como Junior, com responsabilidades de Junior.
+
+Últimas orientações antes da próxima tarefa:
+Ajuste fino: Se quiser deixar o código redondo, aumenta o gap no mobile e considera unificar os CSS em um arquivo só com media queries.
+
+Commit no GitHub: Faz um commit com a mensagem "feat: entrega final do blog pós code review" e me manda o link atualizado.
+
+Descança: Segunda-feira tem nova tarefa, agora de Junior.
+
+Parabéns, Cristian. Você mereceu essa.

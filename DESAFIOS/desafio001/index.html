@@ -4,96 +4,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description">
+  <meta name="description" content="Acompanhe as últimas pesquisas em medicina preventiva e tecnologia na saúde. No blog da Clínica Vida Nova, unimos ciência e inovação para o seu bem-estar.">
   <link rel="shortcut icon" href="favicon/saude.png" type="image/png">
   <title>Blog</title>
-  <!-- <link rel="stylesheet" href="css/estilo.css">
-  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 900px)"> -->
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    img {
-      width: 250px;
-    }
-
-    .content {
-      display: flex;
-    }
-  </style>
-
+  <link rel="stylesheet" href="css/mobile-first.css">
+  <link rel="stylesheet" href="css/medium-screen.css" media="screen and (min-width: 900px)">
+  <link rel="stylesheet" href="css/LargeScreen.css" media="screen and (min-width: 1300px)">
 </head>
 
 <body>
   <div class="container">
 
     <header>
-      <h1>Blog de Saúde e Bem-estar | Clínica Vida Nova</h1>
+      <h1>
+        Blog de Saúde e Bem-estar | Clínica Vida Nova
+      </h1>
     </header>
 
-    <section class="content">
+    <main class="content">
+      <article class="card">
+        <picture>
+          <source media="(min-width: 900px)" srcset="img/pesquisas-avancadas.png">
 
-      <article>
+          <img src="img/pesquisas-avancadas-mobile.png"
+            alt="Cientistas em laboratório de alta tecnologia analisando amostras em microscópio.">
+        </picture>
+
         <h2>Pesquisas Avançadas</h2>
 
-        <img src="img/pesquisas-avancadas.png" alt="Imagem Laboratório de Pesquisas Avançadas">
-
-        <p>
+        <p class="text">
           Na Clínica Vida Nova, unimos ciência e inovação para desenvolver protocolos de tratamento de ponta. Nosso foco
           é a <b>medicina preventiva</b> e diagnósticos de alta precisão, garantindo segurança e resultados modernos
           para sua saúde
         </p>
-
-        <a href="#" title="Leia o artigo completo sobre Tecnologia na Saúde">Confira nossos estudos científicos</a>
+        <p>
+          <a class="link" href="pages-blog/pesquisas-avancadas.html" target="_self" title="Leia o artigo completo sobre Tecnologia na Saúde">Confira nossos estudos científicos</a>
+        </p>
 
       </article>
 
-      <article>
+      <article class="card">
+
+
+        <picture>
+          <source media="(min-width: 900px)" srcset="img/espaço-saude.png">
+
+          <img src="img/espaço-saude-mobile.png"
+            alt="Detalhes da sala de espera do Espaço Saúde, destacando o ambiente organizado e relaxante para os pacientes.">
+        </picture>
+
         <h2>Espaço Saúde</h2>
-
-        <img src="img/espaço-saude.png" alt="Imagem Espaço Saúde">
-
-        <p>
+        <p class="text">
           O Espaço Saúde une nutrição, psicologia e educação física para um cuidado integral. Nossa equipe
           multidisciplinar foca no equilíbrio entre corpo e mente, criando planos personalizados para sua longevidade.
         </p>
         <p>
-          <a href="#" title="Espaço Saúde: Cuidado Integral e Multidisciplinar | Clínica Vida Nova">Conheça nossos
+          <a class="link" href="pages-blog/espaco-saude.html" target="_self" title="Espaço Saúde: Cuidado Integral e Multidisciplinar | Clínica Vida Nova">Conheça nossos
             especialistas</a>
         </p>
 
       </article>
 
-      <article>
-        <h2>Tecnologia ++ Saúde</h2>
+      <article class="card">
 
-        <img src="img/tecnologia-na-saude.png" alt="Imagem Tecnologia na área da Saúde">
+        <picture>
+          <source media="(min-width: 900px)" srcset="img/tecnologia-na-saude.png">
 
-          <p>
-            A <b>Tecnologia na Saúde</b> é nossa grande aliada para tratamentos mais eficientes. Utilizamos sistemas de
-            monitoramento digital e equipamentos de última geração para oferecer diagnósticos rápidos e precisos.
-            Inovação tecnológica na Clínica Vida Nova significa mais segurança e conforto para você.
-          </p>
-          <p><a href="#" title="Leia o artigo completo sobre Pesquisas Avançadas">Descubra nossas tecnologias</a></p>
+          <img src="img/tecnologia-na-saude-mobile.png"
+            alt="Equipamento médico de última geração para exames de imagem de alta precisão na Clínica Vida Nova.">
+        </picture>
 
-
+        <h2>Tecnologia na Saúde</h2>
+        <p class="text">
+          A <b>Tecnologia na Saúde</b> é nossa grande aliada para tratamentos mais eficientes. Utilizamos sistemas de
+          monitoramento digital e equipamentos de última geração para oferecer diagnósticos rápidos e precisos.
+          Inovação tecnológica na Clínica Vida Nova significa mais segurança e conforto para você.
+        </p>
+        <p>
+          <a class="link" href="pages-blog/tecnologia-saude.html" target="_self" title="Leia o artigo completo sobre Pesquisas Avançadas">Descubra nossas tecnologias</a>
+        </p>
       </article>
-    </section>
+
+    </main>
+
+    <footer>
+      <p>
+        <b>Clínica Vida Nova &copy;</b>
+      </p>
+    </footer>
+
   </div>
-
-  <footer>
-    <p>
-      <b>Clínica Vida Nova &copy;</b>
-    </p>
-  </footer>
-
 </body>
 
 </html>
-
-<!-- 1° Laboratório dedicado a pesquisas -->
-<!-- 2° Espaço saúde, profissinais nutricionista, educador físico, psicólogo -->
-<!-- 3° Tecnologia ná area da saúde -->
