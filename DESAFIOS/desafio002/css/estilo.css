@@ -133,12 +133,12 @@ footer {
     align-content: space-evenly;
     gap: 15px;
     background-color: var(--cor-Chumbo);
-    color: var(--cor-CinzaGelo);
+    color: var(--cor-CinzaCultured);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.422);
 }
 
 .footer2 a {
-    color: var(--cor-CinzaGelo);
+    color: var(--cor-CinzaCultured);
     font-weight: bold;
     text-decoration: none;
     transition: 150ms;
