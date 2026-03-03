@@ -83,6 +83,8 @@ article p {
 }
 
 article a {
+    color: var(--cor-VermelhoAlerta);
+    font-weight: 600;
     order: 4;
 }
 
