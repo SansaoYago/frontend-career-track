@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <script src="https://kit.fontawesome.com/63facef115.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Paleta International News */
+            --cor-AzulMarinho: #1A237E;
+            --cor-VermelhoAlerta: #D32F2F;
+            --cor-CinzaGelo: #F5F5F5;
+            --cor-Chumbo: #37474F;
+        }
+
+        body {
+            background-color: var(--cor-CinzaGelo);
+            font: normal 1em / 1.5em 'arial';
+        }
+
+        .contain {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template: 100px 1fr 50px / auto 90vw auto;
+        }
+
+        header {
+            grid-area: 1 / 1 / 2 / -1;
+            background-color: var(--cor-AzulMarinho);
+            color: var(--cor-CinzaGelo);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.445);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 15px;
+            margin-bottom: 20px;
+        }
+
+        main#content {
+            background-color: #37474f65;
+            grid-area: 2 / 2 / -2 / -2;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            padding: 10px;
+            gap: 15px;
+        }
+
+
+        section > article {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        article h2 {
+            order: 1;
+        }
+
+        article p {
+            order: 3;
+        }
+        .img {
+            width: 100%;
+            order: 2;
+        }
+
+        #icon-world {
+            font-size: 3em;
+        }
+
+        footer {
+            padding: 15px;
+            grid-area: -1 / 1 / -2 / -1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        @media screen and (min-width: 900px) {
+            main#content {
+                grid-template: 1fr / repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <header>
+            <h1>BLOG | Um giro pelo Mundo!</h1>
+            <i id="icon-world" class="fa-solid fa-earth-americas"></i>
+        </header>
+        <main id="content">
+            <section>
+                <article id="card1">
+                    <h2></h2>
+                    <p></p>
+                </article>
+            </section>
+            <section>
+                <article id="card2">
+                    <h2></h2>
+                    <p></p>
+                </article>
+            </section>
+            <section>
+                <article id="card3">
+                    <h2></h2>
+                    <p></p>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <section>
+                <h3>Sobre o Giro</h3>
+                <p>
+                    Sua janela para o mundo. <br>
+                    Notícias internacionais, cultura, economia e meio ambiente, direto ao ponto
+                </p>
+            </section>
+            <nav>
+                <h3>Navegação</h3>
+                <ul>
+                    <li>África</li>
+                    <li>Américas</li>
+                    <li>Ásia</li>
+                    <li>Europa</li>
+                    <li>Oceania</li>
+                    <li>Destaques</li>
+                </ul>
+            </nav>
+            <nav>
+                <h3>Conecte-se</h3>
+                <ul>
+                    <li>@giropelomundo</li>
+                    <li>@giropelomundo</li>
+                    <li>@giropelomundo</li>
+                    <li>Siga-nos</li>
+                </ul>
+                <span>
+                    <h4>contato</h4>
+                    <p>contato@giropelomundo.com</p>
+                </span>
+            </nav>
+            <nav>
+                <h3>Destaques Globais</h3>
+                <span>
+                    <h4>Eleições no Reino Unido</h4>
+                    <p>23 de Fev</p>
+                </span>
+                <span>
+                    <h4>Cúpula do Clima</h4>
+                    <p>27 de 2026</p>
+                </span>
+                <span>
+                    <h4>Mercados na Ásia</h4>
+                    <p>28 de 2026</p>
+                </span>
+                <span>
+                    <h4>Compesto na FMR</h4>
+                    <p>29 de Fev</p>
+                </span>
+            </nav>
+        </footer>
+    </div>
+
+    <script>
+        const card = document.querySelectorAll("article")
+        
+        fetch('data/posts.json')
+            .then(res => res.json())
+            .then(dados =>
+                dados.forEach((post, i) => {
+                    const artigo = card[i]
+                    
+                    artigo.querySelector('h2').textContent = post.titulo
+
+                    artigo.querySelector('p').textContent = post.descricao
+
+                    const img = document.createElement('img')
+                    img.src = `img/${post.imagem}`
+                    img.classList.add('img')
+                    artigo.appendChild(img)
+                })
+            )
+    </script>
+</body>
+
+</html>

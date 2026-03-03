@@ -1,0 +1,21 @@
+[
+    {
+        "id": "card1",
+        "titulo": "Macron anuncia que França vai aumentar o numero de armas nucleares do País",
+        "descricao": "O presidente francês, Emmanuel Macron, anunciou nesta segunda-feira, 2, que seu país vai aumentar o número de armas nucleares, em um discurso sobre como o arsenal atômico da União Europeia pode proteger o continente.",
+        "imagem": "macron.webp"
+        
+    },
+    {
+        "id": "card2",
+        "titulo": "Três caças norte-americanos são abatidos por engano pelo Kuwait",
+        "descricao": "No decorrer de um confronto intenso, que incluiu ataques de aviões iranianos, mísseis balísticos e drones, os caças foram abatidos por engano pela defesa aérea do Kuwait, declarou o Centcom em um comunicado, esclarecendo que os seis membros da tripulação se ejetaram e estão sãos e salvos.",
+        "imagem": "cacas-americanos.webp"
+    },
+    {
+        "id": "card3",
+        "titulo": "Canadá lança plano de defesa para diminuir dependência dos EUA",
+        "descricao": "Em 17 de fevereiro, o primeiro-ministro canadense, Mark Carney, anunciou a nova Estratégia Industrial de Defesa do país. Ela se concentra fortemente na transferência da produção de defesa canadense para o mercado interno, numa tentativa de reduzir a dependência do Canadá em relação aos Estados Unidos.",
+        "imagem": "ditadores.webp"
+    }
+]
