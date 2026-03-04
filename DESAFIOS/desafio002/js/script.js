@@ -1,27 +1,18 @@
-const card = document.querySelectorAll("article")
+const main = document.querySelector("main")
 
 fetch('data/posts.json')
     .then(res => res.json())
     .then(dados =>
-        dados.forEach((post, i) => {
-            const artigo = card[i]
+        dados.forEach(post => {
+            const artigo = document.createElement('article')
 
-            artigo.querySelector('h2').textContent = post.titulo
-            artigo.querySelector('p').textContent = post.descricao
+            artigo.innerHTML = `
+                <h2>${post.titulo}</h2>
+                <img src="img/${post.imagem}" alt="${post.alt}" class="img">
+                <p>${post.descricao}</p>
+                <a href="" target="_self" aria-label="Leia a notícia completa sobre ${post.link}">Leia mais</a>
+            `
 
-            const img = document.createElement('img')
-            img.src = `img/${post.imagem}`
-            img.alt = post.alt
-            img.classList.add('img')
-            artigo.appendChild(img)
-
-            const link = document.createElement('a')
-            link.href = `pages/about-world/${post.link}`
-            link.target = "_self"
-
-            link.setAttribute('aria-label', `Leia a notícia completa sobre ${post.titulo}`)
-            link.textContent = `Leia mais`
-
-            artigo.appendChild(link)
+            main.appendChild(artigo)
         })
     )

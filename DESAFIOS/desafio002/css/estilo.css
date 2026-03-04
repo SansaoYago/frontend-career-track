@@ -58,15 +58,10 @@ main#content {
 }
 
 
-section>article {
+article {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-#card1, #card2 {
-    border-bottom: 1px solid var(--cor-CinzaCultured);
-    padding-bottom: 15px;
 }
 
 article h2 {
@@ -118,10 +113,11 @@ footer {
 }
 
 .footer1 {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
+    text-align: justify;
 }
 
 .cor-destaque {
@@ -186,6 +182,7 @@ nav ul {
     }
 
     .footer1 {
+        display: grid;
         grid-template: 1fr / repeat(4, 1fr);
         gap: 50px;
     }
